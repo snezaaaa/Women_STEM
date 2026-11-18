@@ -1,0 +1,337 @@
+{
+  "game": {
+    "title": "STEM IS FOR YOU",
+    "subtitle": "A Girls Go STEM museum escape",
+    "finalMessage": "STEM IS FOR YOU",
+    "intro": [
+      "It's after closing time and you're locked inside the Museum of Science & Technology.",
+      "Someone has erased the names of brilliant women scientists from the exhibits.",
+      "Restore every name, collect the letters of each door code and find your way out!"
+    ],
+    "startButton": "Start",
+    "continueButton": "Continue",
+    "newGameButton": "New game",
+    "timerLabel": "Show timer (for team competitions)",
+    "chooseTitle": "Choose your researcher",
+    "chooseButton": "Enter the museum",
+    "finaleRoomTitle": "The Hall of Names",
+    "finaleHint": "Walk to the empty pedestal in front of the mirror.",
+    "finaleTagline": "Every name in this room started as a curious girl. The 13th pedestal is waiting for you.",
+    "summaryTitle": "You escaped the museum!",
+    "playAgainButton": "Play again"
+  },
+  "rooms": [
+    {
+      "id": "pioneers",
+      "title": "The Pioneers",
+      "code": "STE",
+      "exhibits": [
+        {
+          "id": "lovelace",
+          "letter": "S",
+          "name": "Ada Lovelace",
+          "achievement": "Wrote the first computer program",
+          "silhouettes": ["updo"],
+          "object": "punchcard",
+          "question": "What did she write?",
+          "correct": "The first computer program",
+          "wrong": ["A famous poem", "A cookbook", "A star map"],
+          "clues": [
+            "In the 1840s, she wrote notes about a machine that was never fully built.",
+            "She imagined that machines could one day create music, not just numbers.",
+            "Her notes give a machine step-by-step instructions to calculate numbers."
+          ],
+          "reveal": "Ada Lovelace (1815–1852) wrote the first algorithm for Charles Babbage's Analytical Engine. Fun fact: her father was the poet Lord Byron, and the programming language \"Ada\" is named after her."
+        },
+        {
+          "id": "curie",
+          "letter": "T",
+          "name": "Marie Curie",
+          "achievement": "Nobel Prizes in Physics and Chemistry",
+          "silhouettes": ["bun"],
+          "object": "vial",
+          "question": "Which element did she name after her homeland?",
+          "correct": "Polonium",
+          "wrong": ["Oxygen", "Helium", "Neon"],
+          "clues": [
+            "She discovered two new elements.",
+            "More than 100 years later, her notebooks are still radioactive.",
+            "Her homeland was Poland."
+          ],
+          "reveal": "Marie Curie (1867–1934) discovered polonium and radium and is the only person to win Nobel Prizes in two different sciences (Physics and Chemistry). Fun fact: to read her notebooks today, you must wear protective clothing."
+        },
+        {
+          "id": "maric",
+          "letter": "E",
+          "name": "Mileva Marić",
+          "achievement": "Physicist, Zurich Polytechnic pioneer",
+          "silhouettes": ["bun"],
+          "object": "atom",
+          "question": "Who was her husband?",
+          "correct": "Albert Einstein",
+          "wrong": ["Nikola Tesla", "Isaac Newton", "Niels Bohr"],
+          "clues": [
+            "In 1896, she was the only woman in her class at the Zurich Polytechnic.",
+            "She studied the same subject as her husband and discussed his early ideas with him.",
+            "He became world-famous for E = mc²."
+          ],
+          "reveal": "Mileva Marić (1875–1948) was a Serbian physicist from Titel. Historians still debate how much she contributed to Einstein's early work. Fun fact: under their divorce agreement, Einstein's Nobel Prize money went to her."
+        }
+      ]
+    },
+    {
+      "id": "erased",
+      "title": "The Erased Names",
+      "code": "MIS",
+      "exhibits": [
+        {
+          "id": "franklin",
+          "letter": "M",
+          "name": "Rosalind Franklin",
+          "achievement": "Revealed the structure of DNA",
+          "silhouettes": ["short"],
+          "object": "xray",
+          "question": "What did Photo 51 show?",
+          "correct": "DNA",
+          "wrong": ["A virus", "A salt crystal", "A galaxy"],
+          "clues": [
+            "Her most famous X-ray image is called \"Photo 51\".",
+            "The image revealed a twisted, spiral shape: a double helix.",
+            "That shape is in every cell of your body and carries your genes."
+          ],
+          "reveal": "Rosalind Franklin (1920–1958) captured the image that revealed the structure of DNA. Others used her data without her knowledge, and the Nobel Prize went to three men."
+        },
+        {
+          "id": "meitner",
+          "letter": "I",
+          "name": "Lise Meitner",
+          "achievement": "Explained nuclear fission",
+          "silhouettes": ["bun"],
+          "object": "fission",
+          "question": "What did she explain?",
+          "correct": "Nuclear fission",
+          "wrong": ["Gravity", "Photosynthesis", "Electricity"],
+          "clues": [
+            "Element 109, meitnerium, is named after her.",
+            "On a snowy walk in 1938, she worked out why an atom had split.",
+            "The same process powers nuclear power plants today."
+          ],
+          "reveal": "Lise Meitner (1878–1968) explained nuclear fission, but the Nobel Prize went only to her colleague Otto Hahn. Fun fact: she refused to work on the atomic bomb."
+        },
+        {
+          "id": "lamarr",
+          "letter": "S",
+          "name": "Hedy Lamarr",
+          "achievement": "Invented frequency hopping",
+          "silhouettes": ["waves"],
+          "object": "piano",
+          "question": "Which everyday technology uses her idea?",
+          "correct": "Wi-Fi",
+          "wrong": ["Microwave oven", "Television", "Electric light"],
+          "clues": [
+            "In World War II, she invented a way to stop enemies from jamming radio-controlled torpedoes.",
+            "Her idea: a signal that keeps \"hopping\" between frequencies, like fingers on piano keys.",
+            "You probably used her idea today, to connect your phone without a cable."
+          ],
+          "reveal": "Hedy Lamarr (1914–2000) was a Hollywood star by day and an inventor by night. Her frequency-hopping invention was only recognised in 1997."
+        }
+      ]
+    },
+    {
+      "id": "stars",
+      "title": "To the Stars",
+      "code": "FOR",
+      "exhibits": [
+        {
+          "id": "johnson",
+          "letter": "F",
+          "name": "Katherine Johnson",
+          "achievement": "NASA mathematician, Apollo 11",
+          "silhouettes": ["curls"],
+          "object": "chalkboard",
+          "question": "What was her superpower at NASA?",
+          "correct": "Maths",
+          "wrong": ["Flying planes", "Building rockets", "Medicine"],
+          "clues": [
+            "An astronaut refused to fly until she personally checked the computer's numbers.",
+            "She calculated the paths of spacecraft by hand.",
+            "Her story is told in the film \"Hidden Figures\"."
+          ],
+          "reveal": "Katherine Johnson (1918–2020), a NASA mathematician, calculated flight paths for the first American in orbit and for Apollo 11."
+        },
+        {
+          "id": "tereshkova",
+          "letter": "O",
+          "name": "Valentina Tereshkova",
+          "achievement": "First woman in space (1963)",
+          "silhouettes": ["short"],
+          "object": "capsule",
+          "question": "Where was she the first woman to go?",
+          "correct": "Space",
+          "wrong": ["The South Pole", "The bottom of the ocean", "Mount Everest"],
+          "clues": [
+            "Before her big mission, she worked in a textile factory and loved parachute jumping.",
+            "Her call sign was \"Chaika\", which means \"Seagull\".",
+            "She was the first woman to see the whole planet from above."
+          ],
+          "reveal": "Valentina Tereshkova (born 1937) became the first woman in space in 1963, orbiting Earth 48 times. Fun fact: she is still the only woman who has flown a space mission completely alone."
+        },
+        {
+          "id": "hamilton",
+          "letter": "R",
+          "name": "Margaret Hamilton",
+          "achievement": "Led Apollo flight software",
+          "silhouettes": ["long"],
+          "object": "codestack",
+          "question": "Which mission did her code save?",
+          "correct": "Apollo 11, the Moon landing",
+          "wrong": ["The Titanic", "The first airplane flight", "A Mars rover"],
+          "clues": [
+            "Her 4-year-old daughter, playing with a simulator, helped her find a dangerous bug.",
+            "A famous photo shows her next to a stack of printed code as tall as she is.",
+            "Thanks to her code, humans walked on the Moon in 1969."
+          ],
+          "reveal": "Margaret Hamilton (born 1936) led the team that wrote Apollo's flight software. She invented the term \"software engineering\"."
+        }
+      ]
+    },
+    {
+      "id": "inventions",
+      "title": "Inventions That Change the World",
+      "code": "YOU",
+      "exhibits": [
+        {
+          "id": "kwolek",
+          "letter": "Y",
+          "name": "Stephanie Kwolek",
+          "achievement": "Invented Kevlar",
+          "silhouettes": ["short"],
+          "object": "spool",
+          "question": "What did she invent?",
+          "correct": "Kevlar",
+          "wrong": ["Nylon", "Plastic bags", "Superglue"],
+          "clues": [
+            "In 1965 she found a strange, cloudy liquid that colleagues wanted to throw away.",
+            "She spun it into a fibre five times stronger than steel, for its weight.",
+            "Police officers and firefighters wear it in protective vests and helmets."
+          ],
+          "reveal": "Stephanie Kwolek (1923–2014) invented Kevlar. Fun fact: she took a chemistry job to save money for medical school, and then never left."
+        },
+        {
+          "id": "doudna-charpentier",
+          "letter": "O",
+          "name": "Jennifer Doudna & Emmanuelle Charpentier",
+          "achievement": "CRISPR genetic scissors, Nobel 2020",
+          "silhouettes": ["long", "short"],
+          "object": "crispr",
+          "question": "Which field of science?",
+          "correct": "Biology",
+          "wrong": ["Physics", "Space", "Maths"],
+          "clues": [
+            "They studied how bacteria defend themselves against viruses.",
+            "They turned that defence into a tool that can cut DNA exactly where you want.",
+            "Their tool is called CRISPR, the \"genetic scissors\"."
+          ],
+          "reveal": "Jennifer Doudna and Emmanuelle Charpentier won the 2020 Nobel Prize in Chemistry, the first science Nobel shared only by women."
+        },
+        {
+          "id": "mirzakhani",
+          "letter": "U",
+          "name": "Maryam Mirzakhani",
+          "achievement": "First woman to win the Fields Medal",
+          "silhouettes": ["long"],
+          "object": "saddle",
+          "question": "Which prize was she the first woman to win?",
+          "correct": "Fields Medal",
+          "wrong": ["An Oscar", "Olympic gold", "Nobel Peace Prize"],
+          "clues": [
+            "As a girl in Tehran, she dreamed of becoming a writer.",
+            "She drew huge doodles on paper spread across her floor to study curved surfaces.",
+            "It is often called the \"Nobel Prize of mathematics\"."
+          ],
+          "reveal": "Maryam Mirzakhani (1977–2017) studied the geometry of curved surfaces and became the first woman to win the Fields Medal in 2014."
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "amara",
+      "name": "Amara",
+      "tagline": "Future chemist",
+      "skin": "#6b4430",
+      "hair": { "style": "puff", "color": "#1c1410" },
+      "outfit": { "style": "labcoat", "top": "#f2b632", "bottom": "#3b4f7a", "shoes": "#f4f4f4" },
+      "glasses": false,
+      "hijab": null,
+      "model": "",
+      "modelScale": 1,
+      "animations": { "idle": "Idle", "walk": "Walk" }
+    },
+    {
+      "id": "leyla",
+      "name": "Leyla",
+      "tagline": "Future robotics engineer",
+      "skin": "#c99872",
+      "hair": { "style": "none", "color": "#2a1a12" },
+      "outfit": { "style": "jacket", "top": "#4f6fa8", "jacket": "#2f6a5c", "bottom": "#2c3550", "shoes": "#222222" },
+      "glasses": false,
+      "hijab": "#8e5bd1",
+      "model": "",
+      "modelScale": 1,
+      "animations": { "idle": "Idle", "walk": "Walk" }
+    },
+    {
+      "id": "mei",
+      "name": "Mei",
+      "tagline": "Future astrophysicist",
+      "skin": "#e8c4a0",
+      "hair": { "style": "bob", "color": "#141012" },
+      "outfit": { "style": "labcoat", "top": "#e05a7a", "bottom": "#2d3142", "shoes": "#c94f4f" },
+      "glasses": true,
+      "hijab": null,
+      "model": "",
+      "modelScale": 1,
+      "animations": { "idle": "Idle", "walk": "Walk" }
+    },
+    {
+      "id": "sofia",
+      "name": "Sofia",
+      "tagline": "Future software developer",
+      "skin": "#f1cdb3",
+      "hair": { "style": "ponytail", "color": "#9a4a22" },
+      "outfit": { "style": "jacket", "top": "#f5f0e6", "jacket": "#5d7fb5", "bottom": "#34435f", "shoes": "#ffffff" },
+      "glasses": false,
+      "hijab": null,
+      "model": "",
+      "modelScale": 1,
+      "animations": { "idle": "Idle", "walk": "Walk" }
+    },
+    {
+      "id": "priya",
+      "name": "Priya",
+      "tagline": "Future biomedical scientist",
+      "skin": "#a0694a",
+      "hair": { "style": "braid", "color": "#1a1210" },
+      "outfit": { "style": "labcoat", "top": "#3aa59a", "bottom": "#3f3a5a", "shoes": "#7a4b2a" },
+      "glasses": false,
+      "hijab": null,
+      "model": "",
+      "modelScale": 1,
+      "animations": { "idle": "Idle", "walk": "Walk" }
+    },
+    {
+      "id": "zoe",
+      "name": "Zoe",
+      "tagline": "Future mathematician",
+      "skin": "#8d5a3c",
+      "hair": { "style": "curls", "color": "#2b1a10" },
+      "outfit": { "style": "jacket", "top": "#f7d24a", "jacket": "#7b4fb3", "bottom": "#26334d", "shoes": "#ececec" },
+      "glasses": true,
+      "hijab": null,
+      "model": "",
+      "modelScale": 1,
+      "animations": { "idle": "Idle", "walk": "Walk" }
+    }
+  ]
+}
