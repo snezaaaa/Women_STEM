@@ -182,7 +182,7 @@ export class UI {
       clueHead, clueList, grid, footer);
     let finished = false;
     const renderClues = () => {
-      clueHead.innerHTML = `Clue <b>${p.cluesShown}</b> of 3 <span class="potential">${starsText(4 - p.cluesShown)}</span>`;
+      clueHead.innerHTML = `<span>Clue <b>${p.cluesShown}</b> of 3</span> <span class="potential">${starsText(4 - p.cluesShown)}</span>`;
       clueList.innerHTML = '';
       exhibit.clues.slice(0, p.cluesShown).forEach((c, i) => clueList.append(el('li', { class: i === p.cluesShown - 1 ? 'new' : '' }, c)));
     };

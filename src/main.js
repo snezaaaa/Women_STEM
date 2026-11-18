@@ -28,8 +28,7 @@ scene.fog = new THREE.Fog(0x2a1745, 16, 38);
 
 // soft image-based lighting so gold & glass have something to reflect
 const pmrem = new THREE.PMREMGenerator(renderer);
-scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
-scene.environmentIntensity = 0.55;
+const envMap = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
 pmrem.dispose();
 
 const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 80);
@@ -37,6 +36,13 @@ camera.position.set(0, 4, 4);
 
 const museum = new Museum(scene, content);
 const player = new Player(scene, museum);
+// only metallic / glassy materials get reflections, so the violet walls keep their colour
+scene.traverse((o) => {
+  if (!o.isMesh) return;
+  for (const m of Array.isArray(o.material) ? o.material : [o.material]) {
+    if (m.isMeshStandardMaterial && m.metalness >= 0.3 && !m.envMap) { m.envMap = envMap; m.envMapIntensity = 0.9; m.needsUpdate = true; }
+  }
+});
 const ui = new UI(document.getElementById('ui'), content, sfx);
 
 const rooms = content.rooms;
@@ -234,6 +240,7 @@ function updateFinale(dt) {
     updateFinale.cheered = true;
     player.character.setState('cheer');
     sfx.finale();
+    ui.showHud(false);
     ui.showFinaleMessage(content.game.finalMessage, content.game.finaleTagline);
     museum.pedestal13.q.visible = false;
     museum.pedestal13.beam.visible = false;
