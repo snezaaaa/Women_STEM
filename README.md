@@ -47,6 +47,7 @@ Fields of each **exhibit**:
   "achievement": "Nobel Prizes in Physics and Chemistry",   // short line under the name
   "silhouettes": ["bun"],           // plaque silhouette(s): bun, updo, short, long, waves, curls (2 entries = two people)
   "object": "vial",                 // 3D object in the case (list below)
+  "context": "This Polish-French scientist studied mysterious, invisible rays…",  // 2–3 sentences shown above the question (don't name her!)
   "question": "Which element did she name after her homeland?",
   "correct": "Polonium",
   "wrong": ["Oxygen", "Helium", "Neon"],   // exactly 3; buttons are shuffled
@@ -54,6 +55,23 @@ Fields of each **exhibit**:
   "reveal": "Full text shown on the reveal card…"
 }
 ```
+
+Each case holds a small animated diorama of the scientist's achievement:
+
+| `object` | Shows |
+|---|---|
+| `punchcard` | miniature Analytical Engine: brass gear columns, crank, chain of punched cards, "Note G" |
+| `vial` | glowing radium-green vial, test tubes, Ra 88 / Po 84 element tiles, lab notebook |
+| `atom` | open physics notebook with E = mc², two pens, an atom with orbiting electrons |
+| `xray` | X-ray tube shining on "Photo 51" next to a rotating DNA double helix |
+| `fission` | uranium nucleus of protons & neutrons hit by a neutron, splitting in two with an energy flash; Mt 109 tile |
+| `piano` | piano keys and a frequency-hopping display that jump together, a torpedo with radio waves, a film reel |
+| `chalkboard` | Earth with a capsule flying her calculated orbit, chalkboard with formulas, pencil and calculations |
+| `capsule` | Vostok 6 capsule orbiting above Earth, a parachute landing, a seagull ("Chaika") |
+| `codestack` | stack of code printouts as tall as a tiny programmer, Apollo lunar module landing on the Moon |
+| `spool` | spool of golden Kevlar fibre, woven fabric, protective helmet |
+| `crispr` | DNA helix with a cut, snipping scissors, a virus circling a bacterium |
+| `saddle` | curved saddle surface with a path, a two-hole "pretzel" surface, the Fields Medal, doodle paper |
 
 Available case objects: `punchcard`, `vial`, `atom`, `xray`, `fission`, `piano`, `chalkboard`, `capsule`, `codestack`, `spool`, `crispr`, `saddle`.
 

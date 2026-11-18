@@ -279,6 +279,8 @@ const camLook = new THREE.Vector3();
 const lookNow = new THREE.Vector3(0, 1, -3);
 
 function desiredCamera(outPos, outLook) {
+  const ov = window.__stem && window.__stem.camOverride;
+  if (ov) { outPos.set(...ov.pos); outLook.set(...ov.look); return; }
   const p = player.position;
   const aspect = window.innerWidth / window.innerHeight;
   if (mode === 'intro' || mode === 'select') {

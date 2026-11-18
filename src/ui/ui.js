@@ -178,6 +178,7 @@ export class UI {
     const card = el('div', { class: 'card clue-card', role: 'dialog', 'aria-label': 'Exhibit clue card' },
       el('button', { class: 'close', 'aria-label': 'Close', onclick: () => { this.closeCard(); cb.onClose && cb.onClose(); } }, '×'),
       el('div', { class: 'card-eyebrow' }, 'RESTORE THE NAME'),
+      exhibit.context ? el('p', { class: 'context' }, exhibit.context) : null,
       el('div', { class: 'question' }, exhibit.question),
       clueHead, clueList, grid, footer);
     let finished = false;

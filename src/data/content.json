@@ -31,11 +31,18 @@
           "letter": "S",
           "name": "Ada Lovelace",
           "achievement": "Wrote the first computer program",
-          "silhouettes": ["updo"],
+          "silhouettes": [
+            "updo"
+          ],
           "object": "punchcard",
+          "context": "In the 1840s, a young English mathematician studied the Analytical Engine, a giant mechanical calculating machine designed by her friend Charles Babbage. She translated an article about the machine and added her own notes, three times longer than the article itself. In one note she wrote out, step by step, how the machine could calculate a special series of numbers.",
           "question": "What did she write?",
           "correct": "The first computer program",
-          "wrong": ["A famous poem", "A cookbook", "A star map"],
+          "wrong": [
+            "A famous poem",
+            "A cookbook",
+            "A star map"
+          ],
           "clues": [
             "In the 1840s, she wrote notes about a machine that was never fully built.",
             "She imagined that machines could one day create music, not just numbers.",
@@ -48,11 +55,18 @@
           "letter": "T",
           "name": "Marie Curie",
           "achievement": "Nobel Prizes in Physics and Chemistry",
-          "silhouettes": ["bun"],
+          "silhouettes": [
+            "bun"
+          ],
           "object": "vial",
+          "context": "This Polish-French scientist studied mysterious, invisible rays coming from a dark mineral called pitchblende. Working with her husband Pierre in a cold shed, she found that the rays came from elements nobody had ever seen before. She named the first one after the country where she was born, which at that time was not even on the map.",
           "question": "Which element did she name after her homeland?",
           "correct": "Polonium",
-          "wrong": ["Oxygen", "Helium", "Neon"],
+          "wrong": [
+            "Oxygen",
+            "Helium",
+            "Neon"
+          ],
           "clues": [
             "She discovered two new elements.",
             "More than 100 years later, her notebooks are still radioactive.",
@@ -65,11 +79,18 @@
           "letter": "E",
           "name": "Mileva Marić",
           "achievement": "Physicist, Zurich Polytechnic pioneer",
-          "silhouettes": ["bun"],
+          "silhouettes": [
+            "bun"
+          ],
           "object": "atom",
+          "context": "She grew up in Serbia and was one of the first women to study physics and mathematics at the Polytechnic in Zurich, Switzerland. There she met a fellow student who later became one of the most famous scientists in history. They studied together, shared their love of physics, married in 1903 and had three children.",
           "question": "Who was her husband?",
           "correct": "Albert Einstein",
-          "wrong": ["Nikola Tesla", "Isaac Newton", "Niels Bohr"],
+          "wrong": [
+            "Nikola Tesla",
+            "Isaac Newton",
+            "Niels Bohr"
+          ],
           "clues": [
             "In 1896, she was the only woman in her class at the Zurich Polytechnic.",
             "She studied the same subject as her husband and discussed his early ideas with him.",
@@ -89,11 +110,18 @@
           "letter": "M",
           "name": "Rosalind Franklin",
           "achievement": "Revealed the structure of DNA",
-          "silhouettes": ["short"],
+          "silhouettes": [
+            "short"
+          ],
           "object": "xray",
+          "context": "This British chemist was an expert in X-ray crystallography: shining X-rays through tiny structures and studying the patterns they leave on film. In 1952 her team took an extremely sharp X-ray picture of a long molecule found inside every living cell. The X-shaped pattern in that picture showed how the molecule is built.",
           "question": "What did Photo 51 show?",
           "correct": "DNA",
-          "wrong": ["A virus", "A salt crystal", "A galaxy"],
+          "wrong": [
+            "A virus",
+            "A salt crystal",
+            "A galaxy"
+          ],
           "clues": [
             "Her most famous X-ray image is called \"Photo 51\".",
             "The image revealed a twisted, spiral shape: a double helix.",
@@ -106,11 +134,18 @@
           "letter": "I",
           "name": "Lise Meitner",
           "achievement": "Explained nuclear fission",
-          "silhouettes": ["bun"],
+          "silhouettes": [
+            "bun"
+          ],
           "object": "fission",
+          "context": "This Austrian physicist spent her life studying the nucleus, the tiny centre of an atom. In 1938 her colleagues shot neutrons at uranium atoms and got a strange result they could not explain. She worked out that the uranium nucleus had split into two smaller pieces, releasing an enormous amount of energy.",
           "question": "What did she explain?",
           "correct": "Nuclear fission",
-          "wrong": ["Gravity", "Photosynthesis", "Electricity"],
+          "wrong": [
+            "Gravity",
+            "Photosynthesis",
+            "Electricity"
+          ],
           "clues": [
             "Element 109, meitnerium, is named after her.",
             "On a snowy walk in 1938, she worked out why an atom had split.",
@@ -123,11 +158,18 @@
           "letter": "S",
           "name": "Hedy Lamarr",
           "achievement": "Invented frequency hopping",
-          "silhouettes": ["waves"],
+          "silhouettes": [
+            "waves"
+          ],
           "object": "piano",
+          "context": "She was a famous Hollywood film star in the 1930s and 1940s, but in her free time she loved to invent things. With a composer friend she patented a \"secret communication system\" in which the radio signal jumps quickly between many frequencies, so nobody can block it or listen in. Today the same idea helps your wireless devices share the airwaves without getting in each other's way.",
           "question": "Which everyday technology uses her idea?",
           "correct": "Wi-Fi",
-          "wrong": ["Microwave oven", "Television", "Electric light"],
+          "wrong": [
+            "Microwave oven",
+            "Television",
+            "Electric light"
+          ],
           "clues": [
             "In World War II, she invented a way to stop enemies from jamming radio-controlled torpedoes.",
             "Her idea: a signal that keeps \"hopping\" between frequencies, like fingers on piano keys.",
@@ -147,11 +189,18 @@
           "letter": "F",
           "name": "Katherine Johnson",
           "achievement": "NASA mathematician, Apollo 11",
-          "silhouettes": ["curls"],
+          "silhouettes": [
+            "curls"
+          ],
           "object": "chalkboard",
+          "context": "She was an African-American mathematician who worked at NASA when complex calculations were still done by people, who were called \"computers\". She worked out exactly which path a spacecraft must fly, and where it would come back down to Earth. Without her precise numbers, astronauts could not have travelled safely into orbit and to the Moon.",
           "question": "What was her superpower at NASA?",
           "correct": "Maths",
-          "wrong": ["Flying planes", "Building rockets", "Medicine"],
+          "wrong": [
+            "Flying planes",
+            "Building rockets",
+            "Medicine"
+          ],
           "clues": [
             "An astronaut refused to fly until she personally checked the computer's numbers.",
             "She calculated the paths of spacecraft by hand.",
@@ -164,11 +213,18 @@
           "letter": "O",
           "name": "Valentina Tereshkova",
           "achievement": "First woman in space (1963)",
-          "silhouettes": ["short"],
+          "silhouettes": [
+            "short"
+          ],
           "object": "capsule",
+          "context": "She was a textile-factory worker who loved parachute jumping, and she was chosen from more than 400 applicants for a very special mission. In June 1963 she flew the Vostok 6 spacecraft for almost three days, all by herself. At the end of the flight she ejected from her capsule and landed safely with a parachute.",
           "question": "Where was she the first woman to go?",
           "correct": "Space",
-          "wrong": ["The South Pole", "The bottom of the ocean", "Mount Everest"],
+          "wrong": [
+            "The South Pole",
+            "The bottom of the ocean",
+            "Mount Everest"
+          ],
           "clues": [
             "Before her big mission, she worked in a textile factory and loved parachute jumping.",
             "Her call sign was \"Chaika\", which means \"Seagull\".",
@@ -181,11 +237,18 @@
           "letter": "R",
           "name": "Margaret Hamilton",
           "achievement": "Led Apollo flight software",
-          "silhouettes": ["long"],
+          "silhouettes": [
+            "long"
+          ],
           "object": "codestack",
+          "context": "She was a computer scientist at MIT who led the team writing the software for NASA's Apollo spacecraft. Her programs could notice when the onboard computer had too much to do and keep working on only the most important jobs. Minutes before a world-famous landing, alarms went off, and her software kept the astronauts safe.",
           "question": "Which mission did her code save?",
           "correct": "Apollo 11, the Moon landing",
-          "wrong": ["The Titanic", "The first airplane flight", "A Mars rover"],
+          "wrong": [
+            "The Titanic",
+            "The first airplane flight",
+            "A Mars rover"
+          ],
           "clues": [
             "Her 4-year-old daughter, playing with a simulator, helped her find a dangerous bug.",
             "A famous photo shows her next to a stack of printed code as tall as she is.",
@@ -205,11 +268,18 @@
           "letter": "Y",
           "name": "Stephanie Kwolek",
           "achievement": "Invented Kevlar",
-          "silhouettes": ["short"],
+          "silhouettes": [
+            "short"
+          ],
           "object": "spool",
+          "context": "This American chemist worked at the DuPont company, looking for a strong, lightweight fibre to make car tyres. One experiment produced a thin, cloudy liquid that looked like a failure. When it was spun into threads, it turned out to be incredibly strong and heat-resistant.",
           "question": "What did she invent?",
           "correct": "Kevlar",
-          "wrong": ["Nylon", "Plastic bags", "Superglue"],
+          "wrong": [
+            "Nylon",
+            "Plastic bags",
+            "Superglue"
+          ],
           "clues": [
             "In 1965 she found a strange, cloudy liquid that colleagues wanted to throw away.",
             "She spun it into a fibre five times stronger than steel, for its weight.",
@@ -222,11 +292,19 @@
           "letter": "O",
           "name": "Jennifer Doudna & Emmanuelle Charpentier",
           "achievement": "CRISPR genetic scissors, Nobel 2020",
-          "silhouettes": ["long", "short"],
+          "silhouettes": [
+            "long",
+            "short"
+          ],
           "object": "crispr",
+          "context": "These two scientists, one American and one French, studied the clever way bacteria remember and destroy the viruses that attack them. Together they turned that natural defence into a simple tool that can find one exact spot in DNA and cut it. Scientists now use it to study diseases, develop new medicines and grow better crops.",
           "question": "Which field of science?",
           "correct": "Biology",
-          "wrong": ["Physics", "Space", "Maths"],
+          "wrong": [
+            "Physics",
+            "Space",
+            "Maths"
+          ],
           "clues": [
             "They studied how bacteria defend themselves against viruses.",
             "They turned that defence into a tool that can cut DNA exactly where you want.",
@@ -239,11 +317,18 @@
           "letter": "U",
           "name": "Maryam Mirzakhani",
           "achievement": "First woman to win the Fields Medal",
-          "silhouettes": ["long"],
+          "silhouettes": [
+            "long"
+          ],
           "object": "saddle",
+          "context": "She was an Iranian mathematician who became a professor at Stanford University in the USA. She studied curved surfaces, shapes like doughnuts and pretzels with many holes, and the paths that run across them. In 2014 she received the most famous award in mathematics, which is given only once every four years.",
           "question": "Which prize was she the first woman to win?",
           "correct": "Fields Medal",
-          "wrong": ["An Oscar", "Olympic gold", "Nobel Peace Prize"],
+          "wrong": [
+            "An Oscar",
+            "Olympic gold",
+            "Nobel Peace Prize"
+          ],
           "clues": [
             "As a girl in Tehran, she dreamed of becoming a writer.",
             "She drew huge doodles on paper spread across her floor to study curved surfaces.",
@@ -260,78 +345,147 @@
       "name": "Amara",
       "tagline": "Future chemist",
       "skin": "#6b4430",
-      "hair": { "style": "puff", "color": "#1c1410" },
-      "outfit": { "style": "labcoat", "top": "#f2b632", "bottom": "#3b4f7a", "shoes": "#f4f4f4" },
+      "hair": {
+        "style": "puff",
+        "color": "#1c1410"
+      },
+      "outfit": {
+        "style": "labcoat",
+        "top": "#f2b632",
+        "bottom": "#3b4f7a",
+        "shoes": "#f4f4f4"
+      },
       "glasses": false,
       "hijab": null,
       "model": "",
       "modelScale": 1,
-      "animations": { "idle": "Idle", "walk": "Walk" }
+      "animations": {
+        "idle": "Idle",
+        "walk": "Walk"
+      }
     },
     {
       "id": "leyla",
       "name": "Leyla",
       "tagline": "Future robotics engineer",
       "skin": "#c99872",
-      "hair": { "style": "none", "color": "#2a1a12" },
-      "outfit": { "style": "jacket", "top": "#4f6fa8", "jacket": "#2f6a5c", "bottom": "#2c3550", "shoes": "#222222" },
+      "hair": {
+        "style": "none",
+        "color": "#2a1a12"
+      },
+      "outfit": {
+        "style": "jacket",
+        "top": "#4f6fa8",
+        "jacket": "#2f6a5c",
+        "bottom": "#2c3550",
+        "shoes": "#222222"
+      },
       "glasses": false,
       "hijab": "#8e5bd1",
       "model": "",
       "modelScale": 1,
-      "animations": { "idle": "Idle", "walk": "Walk" }
+      "animations": {
+        "idle": "Idle",
+        "walk": "Walk"
+      }
     },
     {
       "id": "mei",
       "name": "Mei",
       "tagline": "Future astrophysicist",
       "skin": "#e8c4a0",
-      "hair": { "style": "bob", "color": "#141012" },
-      "outfit": { "style": "labcoat", "top": "#e05a7a", "bottom": "#2d3142", "shoes": "#c94f4f" },
+      "hair": {
+        "style": "bob",
+        "color": "#141012"
+      },
+      "outfit": {
+        "style": "labcoat",
+        "top": "#e05a7a",
+        "bottom": "#2d3142",
+        "shoes": "#c94f4f"
+      },
       "glasses": true,
       "hijab": null,
       "model": "",
       "modelScale": 1,
-      "animations": { "idle": "Idle", "walk": "Walk" }
+      "animations": {
+        "idle": "Idle",
+        "walk": "Walk"
+      }
     },
     {
       "id": "sofia",
       "name": "Sofia",
       "tagline": "Future software developer",
       "skin": "#f1cdb3",
-      "hair": { "style": "ponytail", "color": "#9a4a22" },
-      "outfit": { "style": "jacket", "top": "#f5f0e6", "jacket": "#5d7fb5", "bottom": "#34435f", "shoes": "#ffffff" },
+      "hair": {
+        "style": "ponytail",
+        "color": "#9a4a22"
+      },
+      "outfit": {
+        "style": "jacket",
+        "top": "#f5f0e6",
+        "jacket": "#5d7fb5",
+        "bottom": "#34435f",
+        "shoes": "#ffffff"
+      },
       "glasses": false,
       "hijab": null,
       "model": "",
       "modelScale": 1,
-      "animations": { "idle": "Idle", "walk": "Walk" }
+      "animations": {
+        "idle": "Idle",
+        "walk": "Walk"
+      }
     },
     {
       "id": "priya",
       "name": "Priya",
       "tagline": "Future biomedical scientist",
       "skin": "#a0694a",
-      "hair": { "style": "braid", "color": "#1a1210" },
-      "outfit": { "style": "labcoat", "top": "#3aa59a", "bottom": "#3f3a5a", "shoes": "#7a4b2a" },
+      "hair": {
+        "style": "braid",
+        "color": "#1a1210"
+      },
+      "outfit": {
+        "style": "labcoat",
+        "top": "#3aa59a",
+        "bottom": "#3f3a5a",
+        "shoes": "#7a4b2a"
+      },
       "glasses": false,
       "hijab": null,
       "model": "",
       "modelScale": 1,
-      "animations": { "idle": "Idle", "walk": "Walk" }
+      "animations": {
+        "idle": "Idle",
+        "walk": "Walk"
+      }
     },
     {
       "id": "zoe",
       "name": "Zoe",
       "tagline": "Future mathematician",
       "skin": "#8d5a3c",
-      "hair": { "style": "curls", "color": "#2b1a10" },
-      "outfit": { "style": "jacket", "top": "#f7d24a", "jacket": "#7b4fb3", "bottom": "#26334d", "shoes": "#ececec" },
+      "hair": {
+        "style": "curls",
+        "color": "#2b1a10"
+      },
+      "outfit": {
+        "style": "jacket",
+        "top": "#f7d24a",
+        "jacket": "#7b4fb3",
+        "bottom": "#26334d",
+        "shoes": "#ececec"
+      },
       "glasses": true,
       "hijab": null,
       "model": "",
       "modelScale": 1,
-      "animations": { "idle": "Idle", "walk": "Walk" }
+      "animations": {
+        "idle": "Idle",
+        "walk": "Walk"
+      }
     }
   ]
 }
