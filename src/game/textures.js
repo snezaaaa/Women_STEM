@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import { drawPortraitGroup } from './portraits.js';
 
 export const COLORS = {
   wall: 0x8a6bbf,
@@ -284,7 +285,9 @@ export function drawPlaque(c, exhibit, solved) {
   g.save();
   roundRect(g, 40, areaTop, W - 80, areaH, 8);
   g.clip();
-  if (sil.length === 1) {
+  if (solved && exhibit.portraits && exhibit.portraits.length) {
+    drawPortraitGroup(g, W / 2, areaTop + areaH, areaH * 0.95, exhibit.portraits, W);
+  } else if (sil.length === 1) {
     drawSilhouette(g, W / 2, areaTop + areaH, areaH * 0.95, sil[0], fill);
   } else {
     drawSilhouette(g, W / 2 - W * 0.17, areaTop + areaH, areaH * 0.85, sil[0], fill);
@@ -511,6 +514,14 @@ export function nameCardTexture(name) {
     fitFont(g, name, 470, 52);
     g.fillText(name, 256, 66);
   }
+  return toTexture(c);
+}
+
+/** Hall-of-Names figure: illustrated portrait if available, else a violet silhouette. */
+export function figureTexture(exhibit) {
+  if (!exhibit.portraits || !exhibit.portraits.length) return silhouetteTexture(exhibit.silhouettes || ['bun']);
+  const c = canvas(512, 640);
+  drawPortraitGroup(c.getContext('2d'), 256, 640, 600, exhibit.portraits, 512);
   return toTexture(c);
 }
 

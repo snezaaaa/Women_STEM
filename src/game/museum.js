@@ -6,7 +6,7 @@ import fontJson from 'three/examples/fonts/optimer_bold.typeface.json';
 import { buildExhibitObject } from './exhibits.js';
 import {
   checkerTexture, wallTexture, radialGlowTexture, ringTexture, plaqueTexture, updatePlaqueTexture,
-  keypadTexture, updateKeypadTexture, silhouetteTexture, nameCardTexture,
+  keypadTexture, updateKeypadTexture, figureTexture, nameCardTexture,
 } from './textures.js';
 
 export const ROOM_W = 18;
@@ -364,7 +364,7 @@ export class Museum {
       this._cur.add(g);
       this._box(0.9, 0.7, 0.9, this.mats.white, 0, 0.35, 0, { parent: g });
       this._box(0.98, 0.06, 0.98, this.mats.gold, 0, 0.7, 0, { parent: g });
-      const sil = new THREE.Mesh(new THREE.PlaneGeometry(1.0, 1.25), new THREE.MeshBasicMaterial({ map: silhouetteTexture(ex.silhouettes || ['bun']), transparent: true, side: THREE.DoubleSide, alphaTest: 0.05 }));
+      const sil = new THREE.Mesh(new THREE.PlaneGeometry(1.0, 1.25), new THREE.MeshBasicMaterial({ map: figureTexture(ex), transparent: true, side: THREE.DoubleSide, alphaTest: 0.05 }));
       sil.position.y = 0.73 + 0.62;
       g.add(sil);
       const card = new THREE.Mesh(new THREE.PlaneGeometry(1.2, 0.3), new THREE.MeshBasicMaterial({ map: nameCardTexture(ex.name), transparent: true }));

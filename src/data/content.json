@@ -34,6 +34,29 @@
           "silhouettes": [
             "updo"
           ],
+          "portraits": [
+            {
+              "skin": "#f3d9c6",
+              "eyes": "#4a3020",
+              "lips": "#b5646a",
+              "hair": {
+                "color": "#3b2418",
+                "length": "short",
+                "texture": "wavy",
+                "part": "center",
+                "bun": true,
+                "ringlets": true
+              },
+              "outfit": "#4b3a78",
+              "neckline": "high",
+              "accessories": [
+                "lace",
+                "headband",
+                "brooch"
+              ],
+              "headbandColor": "#e2b94f"
+            }
+          ],
           "object": "punchcard",
           "context": "In the 1840s, a young English mathematician studied the Analytical Engine, a giant mechanical calculating machine designed by her friend Charles Babbage. She translated an article about the machine and added her own notes, three times longer than the article itself. In one note she wrote out, step by step, how the machine could calculate a special series of numbers.",
           "question": "What did she write?",
@@ -58,6 +81,24 @@
           "silhouettes": [
             "bun"
           ],
+          "portraits": [
+            {
+              "skin": "#f1d6c2",
+              "eyes": "#5d6f7f",
+              "lips": "#a85c60",
+              "hair": {
+                "color": "#6b5a4a",
+                "length": "short",
+                "texture": "wavy",
+                "part": "center",
+                "bun": true,
+                "volume": 1
+              },
+              "outfit": "#1f1b24",
+              "neckline": "high",
+              "accessories": []
+            }
+          ],
           "object": "vial",
           "context": "This Polish-French scientist studied mysterious, invisible rays coming from a dark mineral called pitchblende. Working with her husband Pierre in a cold shed, she found that the rays came from elements nobody had ever seen before. She named the first one after the country where she was born, which at that time was not even on the map.",
           "question": "Which element did she name after her homeland?",
@@ -81,6 +122,26 @@
           "achievement": "Physicist, Zurich Polytechnic pioneer",
           "silhouettes": [
             "bun"
+          ],
+          "portraits": [
+            {
+              "skin": "#efcfb5",
+              "eyes": "#3a2618",
+              "lips": "#a85c60",
+              "hair": {
+                "color": "#24160f",
+                "length": "short",
+                "texture": "straight",
+                "part": "center",
+                "bun": true
+              },
+              "outfit": "#3a2f5a",
+              "neckline": "high",
+              "accessories": [
+                "lace",
+                "brooch"
+              ]
+            }
           ],
           "object": "atom",
           "context": "She grew up in Serbia and was one of the first women to study physics and mathematics at the Polytechnic in Zurich, Switzerland. There she met a fellow student who later became one of the most famous scientists in history. They studied together, shared their love of physics, married in 1903 and had three children.",
@@ -113,6 +174,23 @@
           "silhouettes": [
             "short"
           ],
+          "portraits": [
+            {
+              "skin": "#f3d8c4",
+              "eyes": "#3a2618",
+              "lips": "#b0606a",
+              "hair": {
+                "color": "#2e2018",
+                "length": "jaw",
+                "texture": "wavy",
+                "part": "side"
+              },
+              "outfit": "#2f3b52",
+              "neckline": "shirt",
+              "inner": "#ffffff",
+              "accessories": []
+            }
+          ],
           "object": "xray",
           "context": "This British chemist was an expert in X-ray crystallography: shining X-rays through tiny structures and studying the patterns they leave on film. In 1952 her team took an extremely sharp X-ray picture of a long molecule found inside every living cell. The X-shaped pattern in that picture showed how the molecule is built.",
           "question": "What did Photo 51 show?",
@@ -137,6 +215,24 @@
           "silhouettes": [
             "bun"
           ],
+          "portraits": [
+            {
+              "skin": "#efd3bd",
+              "eyes": "#4a3020",
+              "lips": "#a85c60",
+              "hair": {
+                "color": "#8a7d72",
+                "length": "short",
+                "texture": "wavy",
+                "part": "side",
+                "bun": true
+              },
+              "outfit": "#2b2b38",
+              "neckline": "shirt",
+              "inner": "#f1ede4",
+              "accessories": []
+            }
+          ],
           "object": "fission",
           "context": "This Austrian physicist spent her life studying the nucleus, the tiny centre of an atom. In 1938 her colleagues shot neutrons at uranium atoms and got a strange result they could not explain. She worked out that the uranium nucleus had split into two smaller pieces, releasing an enormous amount of energy.",
           "question": "What did she explain?",
@@ -160,6 +256,25 @@
           "achievement": "Invented frequency hopping",
           "silhouettes": [
             "waves"
+          ],
+          "portraits": [
+            {
+              "skin": "#f4d7c4",
+              "eyes": "#3f6e6a",
+              "lips": "#b8323c",
+              "hair": {
+                "color": "#1a1210",
+                "length": "shoulder",
+                "texture": "wavy",
+                "part": "center",
+                "volume": 1
+              },
+              "outfit": "#7a1f3d",
+              "neckline": "round",
+              "accessories": [
+                "earrings"
+              ]
+            }
           ],
           "object": "piano",
           "context": "She was a famous Hollywood film star in the 1930s and 1940s, but in her free time she loved to invent things. With a composer friend she patented a \"secret communication system\" in which the radio signal jumps quickly between many frequencies, so nobody can block it or listen in. Today the same idea helps your wireless devices share the airwaves without getting in each other's way.",
@@ -192,6 +307,26 @@
           "silhouettes": [
             "curls"
           ],
+          "portraits": [
+            {
+              "skin": "#8a5a3c",
+              "eyes": "#2a1a10",
+              "lips": "#7a3f3a",
+              "hair": {
+                "color": "#2a1c14",
+                "length": "short",
+                "texture": "curly",
+                "part": "none"
+              },
+              "outfit": "#3b6fa8",
+              "neckline": "round",
+              "glasses": "round",
+              "accessories": [
+                "pearls",
+                "earrings"
+              ]
+            }
+          ],
           "object": "chalkboard",
           "context": "She was an African-American mathematician who worked at NASA when complex calculations were still done by people, who were called \"computers\". She worked out exactly which path a spacecraft must fly, and where it would come back down to Earth. Without her precise numbers, astronauts could not have travelled safely into orbit and to the Moon.",
           "question": "What was her superpower at NASA?",
@@ -216,6 +351,24 @@
           "silhouettes": [
             "short"
           ],
+          "portraits": [
+            {
+              "skin": "#f2d3bd",
+              "eyes": "#4a5f78",
+              "lips": "#b0606a",
+              "hair": {
+                "color": "#7a4f2a",
+                "length": "short",
+                "texture": "wavy",
+                "part": "side"
+              },
+              "outfit": "#e8742c",
+              "neckline": "spacesuit",
+              "accessories": [
+                "helmet"
+              ]
+            }
+          ],
           "object": "capsule",
           "context": "She was a textile-factory worker who loved parachute jumping, and she was chosen from more than 400 applicants for a very special mission. In June 1963 she flew the Vostok 6 spacecraft for almost three days, all by herself. At the end of the flight she ejected from her capsule and landed safely with a parachute.",
           "question": "Where was she the first woman to go?",
@@ -239,6 +392,23 @@
           "achievement": "Led Apollo flight software",
           "silhouettes": [
             "long"
+          ],
+          "portraits": [
+            {
+              "skin": "#f3d6c4",
+              "eyes": "#4a3020",
+              "lips": "#b5646a",
+              "hair": {
+                "color": "#4a3426",
+                "length": "long",
+                "texture": "straight",
+                "part": "center"
+              },
+              "outfit": "#3d7f8c",
+              "neckline": "round",
+              "glasses": "large",
+              "accessories": []
+            }
           ],
           "object": "codestack",
           "context": "She was a computer scientist at MIT who led the team writing the software for NASA's Apollo spacecraft. Her programs could notice when the onboard computer had too much to do and keep working on only the most important jobs. Minutes before a world-famous landing, alarms went off, and her software kept the astronauts safe.",
@@ -271,6 +441,23 @@
           "silhouettes": [
             "short"
           ],
+          "portraits": [
+            {
+              "skin": "#f2d4c0",
+              "eyes": "#4a5f78",
+              "lips": "#a85c60",
+              "hair": {
+                "color": "#c9c0b5",
+                "length": "short",
+                "texture": "curly",
+                "part": "none"
+              },
+              "outfit": "#5a6e9a",
+              "neckline": "labcoat",
+              "glasses": "round",
+              "accessories": []
+            }
+          ],
           "object": "spool",
           "context": "This American chemist worked at the DuPont company, looking for a strong, lightweight fibre to make car tyres. One experiment produced a thin, cloudy liquid that looked like a failure. When it was spun into threads, it turned out to be incredibly strong and heat-resistant.",
           "question": "What did she invent?",
@@ -296,6 +483,39 @@
             "long",
             "short"
           ],
+          "portraits": [
+            {
+              "skin": "#f3d6c3",
+              "eyes": "#4a6a8a",
+              "lips": "#b5646a",
+              "hair": {
+                "color": "#b48a5a",
+                "length": "shoulder",
+                "texture": "straight",
+                "part": "side"
+              },
+              "outfit": "#2f3b52",
+              "neckline": "blazer",
+              "inner": "#ffffff",
+              "accessories": [
+                "earrings"
+              ]
+            },
+            {
+              "skin": "#efd0bb",
+              "eyes": "#4a3020",
+              "lips": "#a85c60",
+              "hair": {
+                "color": "#5a5048",
+                "length": "short",
+                "texture": "straight",
+                "part": "side"
+              },
+              "outfit": "#1f1b24",
+              "neckline": "round",
+              "accessories": []
+            }
+          ],
           "object": "crispr",
           "context": "These two scientists, one American and one French, studied the clever way bacteria remember and destroy the viruses that attack them. Together they turned that natural defence into a simple tool that can find one exact spot in DNA and cut it. Scientists now use it to study diseases, develop new medicines and grow better crops.",
           "question": "Which field of science?",
@@ -319,6 +539,22 @@
           "achievement": "First woman to win the Fields Medal",
           "silhouettes": [
             "long"
+          ],
+          "portraits": [
+            {
+              "skin": "#e8c3a6",
+              "eyes": "#3a2618",
+              "lips": "#a85c60",
+              "hair": {
+                "color": "#3a2a1e",
+                "length": "jaw",
+                "texture": "wavy",
+                "part": "side"
+              },
+              "outfit": "#8e5bd1",
+              "neckline": "round",
+              "accessories": []
+            }
           ],
           "object": "saddle",
           "context": "She was an Iranian mathematician who became a professor at Stanford University in the USA. She studied curved surfaces, shapes like doughnuts and pretzels with many holes, and the paths that run across them. In 2014 she received the most famous award in mathematics, which is given only once every four years.",

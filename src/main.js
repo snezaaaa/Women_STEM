@@ -8,6 +8,7 @@ import { UI, formatTime } from './ui/ui.js';
 import { sfx } from './game/audio.js';
 import { loadSave, writeSave, clearSave, loadPrefs, writePrefs } from './game/save.js';
 import { drawSilhouette } from './game/textures.js';
+import { drawPortraitGroup } from './game/portraits.js';
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js';
 
 // ---------------------------------------------------------------- setup
@@ -181,6 +182,7 @@ function openCase(c) {
 
 function paintSil(canvasEl, ex) {
   const g = canvasEl.getContext('2d');
+  if (drawPortraitGroup(g, 110, 180, 172, ex.portraits, 220)) return;
   const s = ex.silhouettes || ['bun'];
   if (s.length === 1) drawSilhouette(g, 110, 180, 170, s[0], '#8e5bd1');
   else { drawSilhouette(g, 72, 180, 150, s[0], '#8e5bd1'); drawSilhouette(g, 148, 180, 150, s[1], '#6d3fb3'); }

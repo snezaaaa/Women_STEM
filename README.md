@@ -47,6 +47,7 @@ Fields of each **exhibit**:
   "achievement": "Nobel Prizes in Physics and Chemistry",   // short line under the name
   "silhouettes": ["bun"],           // plaque silhouette(s): bun, updo, short, long, waves, curls (2 entries = two people)
   "object": "vial",                 // 3D object in the case (list below)
+  "portraits": [{ … }],             // the illustration that replaces the silhouette once solved (see below)
   "context": "This Polish-French scientist studied mysterious, invisible rays…",  // 2–3 sentences shown above the question (don't name her!)
   "question": "Which element did she name after her homeland?",
   "correct": "Polonium",
@@ -55,6 +56,31 @@ Fields of each **exhibit**:
   "reveal": "Full text shown on the reveal card…"
 }
 ```
+
+### Illustrated portraits
+
+Before a name is restored, the plaque shows a dark silhouette with "? ? ?". Once it is solved, the silhouette turns into a friendly **illustrated portrait**. The same portrait appears on the "Name restored" card and in the final Hall of Names. The portraits are drawn in code (`src/game/portraits.js`) from a few traits in `content.json`, so you can adjust them without drawing anything:
+
+```jsonc
+"portraits": [{
+  "skin": "#f1d6c2", "eyes": "#5d6f7f", "lips": "#a85c60",
+  "hair": { "color": "#6b5a4a", "length": "short", "texture": "wavy", "part": "center", "bun": true, "volume": 1 },
+  "outfit": "#1f1b24", "neckline": "high",
+  "glasses": "none",
+  "accessories": []
+}]
+```
+
+| Field | Options |
+|---|---|
+| `hair.length` | `short`, `jaw`, `shoulder`, `long` |
+| `hair.texture` | `straight`, `wavy`, `curly` |
+| `hair.part` | `center`, `side`, `none`; also `bun`, `bangs`, `ringlets` (true/false) and `volume` (0–2) |
+| `neckline` | `round`, `high` (historical collar), `shirt`, `labcoat`, `blazer`, `spacesuit`; `inner` = shirt colour |
+| `glasses` | `none`, `round`, `large` |
+| `accessories` | `pearls`, `earrings`, `headband`, `lace`, `brooch`, `helmet` |
+
+Two entries in `portraits` draw two people side by side (Doudna & Charpentier). Without `portraits`, the solved plaque keeps a violet silhouette.
 
 Each case holds a small animated diorama of the scientist's achievement:
 
@@ -164,4 +190,4 @@ Please keep characters school-appropriate (no revealing clothing), and list each
 | Optimer Bold typeface (3D room titles), shipped with three.js | MgOpen fonts | MgOpen licence (free use, modification and redistribution) |
 | Vite (build tool) | <https://vitejs.dev> | MIT |
 
-There are no photos of real people anywhere in the game. All scientists appear as generic stylised silhouettes drawn in code. All sounds are synthesized at runtime, with no audio files and no music.
+There are no photos of real people anywhere in the game. Scientists appear as silhouettes and, once their name is restored, as simple stylised cartoon illustrations drawn in code from a few traits (hair, era clothing, accessories). These are not likenesses. All sounds are synthesized at runtime, with no audio files and no music.

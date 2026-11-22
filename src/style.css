@@ -174,7 +174,7 @@ h2 { font-family: var(--serif); margin: 6px 0 12px; font-size: clamp(1.5rem, 4.6
 .shake { animation: shake 0.42s ease; }
 
 .reveal-top { display: flex; align-items: center; justify-content: center; gap: 18px; }
-.reveal-sil { width: 140px; height: 115px; }
+.reveal-sil { width: 200px; height: 164px; }
 .big-letter {
   width: 92px; height: 104px; border-radius: 18px; display: grid; place-items: center;
   font-family: var(--serif); font-size: 4rem; font-weight: 700; color: var(--gold);
@@ -278,7 +278,7 @@ h2 { font-family: var(--serif); margin: 6px 0 12px; font-size: clamp(1.5rem, 4.6
   .prompt { bottom: 70px; font-size: 0.95rem; }
   .arrow { width: 54px; height: 54px; }
   .char-name { font-size: 1.6rem; }
-  .reveal-sil { width: 110px; height: 90px; }
+  .reveal-sil { width: 150px; height: 123px; }
   .big-letter { width: 76px; height: 86px; font-size: 3.2rem; }
 }
 /* projector / large screens: scale everything up a bit */
