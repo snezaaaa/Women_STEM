@@ -226,10 +226,19 @@ export class UI {
       }
     };
     renderClues();
-    this.card = card;
-    this.layer.append(card);
-    requestAnimationFrame(() => card.classList.add('in'));
+    this._showInOverlay(card, exhibit);
     return card;
+  }
+
+  /** Full-screen reading view: a window onto the zoomed-in exhibit + a large text panel. */
+  _showInOverlay(card, exhibit) {
+    const overlay = el('div', { class: 'inspect-overlay' },
+      el('div', { class: 'inspect-view', 'aria-hidden': 'true' },
+        el('div', { class: 'inspect-caption' }, el('span', {}, 'EXHIBIT'), el('b', {}, exhibit.solvedLabel || 'Look closely: what does it show?'))),
+      el('div', { class: 'inspect-panel' }, card));
+    this.card = overlay;
+    this.layer.append(overlay);
+    requestAnimationFrame(() => { overlay.classList.add('in'); card.classList.add('in'); });
   }
 
   closeCard() {
@@ -248,9 +257,7 @@ export class UI {
       el('div', { class: 'reveal-stars', 'aria-label': `${stars} of 3 stars` }, starsText(stars)),
       el('p', { class: 'reveal-text' }, exhibit.reveal),
       el('button', { class: 'btn primary', onclick: () => { onClose(letterEl); } }, buttonLabel || 'Collect the letter ' + letter));
-    this.card = card;
-    this.layer.append(card);
-    requestAnimationFrame(() => card.classList.add('in'));
+    this._showInOverlay(card, { solvedLabel: exhibit.name });
     return { card, letterEl, sil };
   }
 

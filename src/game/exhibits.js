@@ -44,7 +44,7 @@ function gearGeometry(rOuter, rInner, teeth, depth) {
   return geo;
 }
 
-function standBase(group, r = 0.22, color = 0x2b2140) {
+function standBase(group, r = 0.22, color = 0xe6ddcc) {
   return add(group, new THREE.CylinderGeometry(r, r * 1.1, 0.05, 20), basic(color, { roughness: 0.4 }), 0, 0.025, 0);
 }
 
@@ -297,7 +297,7 @@ const builders = {
       core.add(holder);
       rings.push({ e, phase: i * 2.1 });
     }
-    add(group, new THREE.CylinderGeometry(0.01, 0.01, 0.2), basic(0x2b2140), 0, 0.17, -0.05);
+    add(group, new THREE.CylinderGeometry(0.01, 0.01, 0.2), basic(0xe6ddcc), 0, 0.17, -0.05);
     standBase(group, 0.08).position.set(0, 0.025, -0.05);
     return {
       group,
@@ -425,7 +425,7 @@ const builders = {
     for (let i = 0; i < 8; i++) {
       bars.push(add(screen, new THREE.BoxGeometry(0.028, 0.15, 0.01), dim, -0.14 + i * 0.04, 0, 0.02));
     }
-    add(group, new THREE.CylinderGeometry(0.01, 0.01, 0.2), basic(0x2b2140), -0.08, 0.1, -0.12);
+    add(group, new THREE.CylinderGeometry(0.01, 0.01, 0.2), basic(0xe6ddcc), -0.08, 0.1, -0.12);
     standBase(group, 0.07).position.set(-0.08, 0.025, -0.12);
     // torpedo
     const torp = new THREE.Group();
@@ -457,7 +457,7 @@ const builders = {
       const hole = add(reel, new THREE.CylinderGeometry(0.018, 0.018, 0.014, 10), basic(0x111111), Math.cos((i / 5) * Math.PI * 2) * 0.045, Math.sin((i / 5) * Math.PI * 2) * 0.045, 0.001);
       hole.rotation.x = Math.PI / 2;
     }
-    add(group, new THREE.BoxGeometry(0.02, 0.12, 0.02), basic(0x2b2140), 0.27, 0.06, 0.0);
+    add(group, new THREE.BoxGeometry(0.02, 0.12, 0.02), basic(0xe6ddcc), 0.27, 0.06, 0.0);
     return {
       group,
       update(t) {
@@ -491,7 +491,7 @@ const builders = {
     for (const x of [-0.17, 0.17]) add(board, new THREE.BoxGeometry(0.02, 0.3, 0.02), wood, x, 0.15, 0);
     // Earth + orbit
     standBase(group, 0.12).position.set(0.1, 0.025, 0.06);
-    add(group, new THREE.CylinderGeometry(0.01, 0.01, 0.2), basic(0x2b2140), 0.1, 0.12, 0.06);
+    add(group, new THREE.CylinderGeometry(0.01, 0.01, 0.2), basic(0xe6ddcc), 0.1, 0.12, 0.06);
     const sys = new THREE.Group();
     sys.position.set(0.1, 0.36, 0.06);
     group.add(sys);
@@ -651,7 +651,7 @@ const builders = {
   // Stephanie Kwolek – golden Kevlar fibre on a spool, woven fabric and a protective helmet
   spool() {
     const group = new THREE.Group();
-    add(group, new THREE.BoxGeometry(0.62, 0.04, 0.34), basic(0x2b2140), 0, 0.02, 0);
+    add(group, new THREE.BoxGeometry(0.62, 0.04, 0.34), basic(0xe6ddcc), 0, 0.02, 0);
     const spool = new THREE.Group();
     spool.position.set(-0.13, 0.25, -0.02);
     spool.rotation.z = Math.PI / 2;
@@ -664,7 +664,7 @@ const builders = {
       const tr = add(spool, new THREE.TorusGeometry(0.112, 0.005, 4, 28), fiberMat, 0, -0.1 + i * 0.04, 0);
       tr.rotation.x = Math.PI / 2;
     }
-    for (const x of [-0.27, 0.01]) add(group, new THREE.BoxGeometry(0.03, 0.24, 0.04), basic(0x2b2140), x, 0.14, -0.02);
+    for (const x of [-0.27, 0.01]) add(group, new THREE.BoxGeometry(0.03, 0.24, 0.04), basic(0xe6ddcc), x, 0.14, -0.02);
     // woven Kevlar panel
     const weave = canvasTex(128, 128, (g, w, h) => {
       g.fillStyle = '#b8901f';
@@ -779,7 +779,7 @@ const builders = {
     }
     holder.add(new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts), 40, 0.005, 4), glow(0xffffff, 1.5)));
     group.add(holder);
-    add(group, new THREE.CylinderGeometry(0.012, 0.012, 0.4), basic(0x2b2140), -0.08, 0.22, -0.04);
+    add(group, new THREE.CylinderGeometry(0.012, 0.012, 0.4), basic(0xe6ddcc), -0.08, 0.22, -0.04);
     standBase(group, 0.08).position.set(-0.08, 0.025, -0.04);
     // genus-2 "pretzel" surface
     const pretzel = new THREE.Group();
@@ -810,7 +810,7 @@ const builders = {
       const r = add(medal, new THREE.PlaneGeometry(0.03, 0.12), new THREE.MeshStandardMaterial({ map: ribbon, side: THREE.DoubleSide }), s * 0.02, 0.12, -0.004);
       r.rotation.z = s * 0.25;
     }
-    add(group, new THREE.BoxGeometry(0.12, 0.03, 0.06), basic(0x2b2140), 0.2, 0.015, 0.1);
+    add(group, new THREE.BoxGeometry(0.12, 0.03, 0.06), basic(0xe6ddcc), 0.2, 0.015, 0.1);
     return {
       group,
       update(t) {

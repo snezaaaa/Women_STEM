@@ -63,6 +63,7 @@ let mode = 'intro'; // intro | select | play | finale | summary
 let currentRoom = -1;
 let nearCase = null;
 let modal = null; // 'clue' | 'reveal' | null
+let inspecting = null; // case shown close-up while a card is open
 let selectIndex = 0;
 let lastSaveAt = 0;
 const clock = new THREE.Clock();
@@ -161,6 +162,7 @@ function openCase(c) {
   player.clearPath();
   // face the case
   player.heading = Math.atan2(c.pos.x - player.position.x, c.pos.z - player.position.z);
+  inspecting = c;
   sfx.open();
   if (save.results[ex.id] !== undefined) {
     modal = 'reveal';
@@ -283,6 +285,14 @@ function desiredCamera(outPos, outLook) {
   if (ov) { outPos.set(...ov.pos); outLook.set(...ov.look); return; }
   const p = player.position;
   const aspect = window.innerWidth / window.innerHeight;
+  if (inspecting && mode === 'play') {
+    // close-up of the exhibit; the view offset (updateCamera) moves it into the free part of the screen
+    const c = inspecting;
+    const dist = aspect < 1 ? 1.8 : 1.5;
+    outPos.set(c.pos.x, c.objectCentreY + 0.42, c.pos.z + dist);
+    outLook.set(c.pos.x, c.objectCentreY, c.pos.z);
+    return;
+  }
   if (mode === 'intro' || mode === 'select') {
     const portrait = aspect < 0.8;
     outPos.set(0, 1.25, p.z + (portrait ? 4.4 : 3.1));
@@ -327,6 +337,24 @@ function updateCamera(dt) {
   // keep a usable horizontal field of view on portrait phones
   const fov = Math.round(THREE.MathUtils.clamp((2 * Math.atan(Math.tan(THREE.MathUtils.degToRad(27)) / aspect) * 180) / Math.PI, 50, 76));
   if (camera.fov !== fov) { camera.fov = fov; camera.updateProjectionMatrix(); }
+  // shift the picture so the inspected exhibit sits left of (or above) the reading panel
+  const W = window.innerWidth, H = window.innerHeight;
+  const tx = inspecting && aspect >= 1 ? W * 0.29 : 0;
+  const ty = inspecting && aspect < 1 ? H * 0.34 : 0;
+  viewOff.x += (tx - viewOff.x) * k;
+  viewOff.y += (ty - viewOff.y) * k;
+  if (Math.abs(viewOff.x) + Math.abs(viewOff.y) > 0.5) camera.setViewOffset(W, H, viewOff.x, viewOff.y, W, H);
+  else if (camera.view && camera.view.enabled) camera.clearViewOffset();
+}
+const viewOff = { x: 0, y: 0 };
+
+// The inspected exhibit slowly turns so every side can be seen; others ease back.
+function turnExhibits(t, dt) {
+  for (const c of museum.cases) {
+    const g = c.object.group;
+    const target = inspecting === c ? Math.sin(t * 0.45) * 0.8 : 0;
+    g.rotation.y += (target - g.rotation.y) * Math.min(1, dt * 2);
+  }
 }
 
 // ---------------------------------------------------------------- input
@@ -448,6 +476,9 @@ function frame() {
       player.root.position.y = d < 0.8 ? museum.pedestal13.height : 0;
     }
   }
+  if (!modal) inspecting = null;
+  player.root.visible = !inspecting;
+  turnExhibits(t, dt);
   fadeOccluders(dt);
   museum.update(t, dt, player.position);
   updateCamera(dt);
