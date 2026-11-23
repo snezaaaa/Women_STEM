@@ -84,7 +84,7 @@ function showIntro() {
   mode = 'intro';
   ui.showHud(false);
   applyCharacter(content.characters[0]);
-  player.teleport(0, -3.6, 0);
+  player.teleport(0, -5.0, 0);
   ui.showIntro({
     hasSave: !!(save && save.characterId && !save.finished),
     timer: save ? save.timerOn : false,
@@ -105,7 +105,7 @@ function showSelect() {
   mode = 'select';
   selectIndex = 0;
   applyCharacter(content.characters[0]);
-  player.teleport(0, -3.6, 0);
+  player.teleport(0, -5.0, 0);
   ui.showCharacterSelect(content.characters, 0, (i) => {
     selectIndex = i;
     applyCharacter(content.characters[i]);
@@ -512,6 +512,7 @@ window.__stem = {
   },
   walkTo(x, z) { return player.walkTo(new THREE.Vector3(x, 0, z)); },
   timeScale: 1,
+  snap: () => snapCamera(),
 };
 
 save = save || freshSave();
