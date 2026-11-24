@@ -232,7 +232,12 @@ h2 { font-family: var(--serif); margin: 6px 0 12px; font-size: clamp(1.5rem, 4.6
 }
 .toast.in { opacity: 1; transform: translate(-50%, 0); }
 
-.finale-msg { position: absolute; left: 0; right: 0; top: 3%; text-align: center; opacity: 0; transition: opacity 1.4s; pointer-events: none; padding: 0 16px; }
+.finale-msg {
+  position: absolute; left: 0; right: 0; top: 0; text-align: center; opacity: 0; transition: opacity 1.4s; pointer-events: none;
+  padding: max(18px, env(safe-area-inset-top)) 16px 34px;
+  background: linear-gradient(180deg, rgba(20, 8, 38, 0.92) 0%, rgba(20, 8, 38, 0.8) 70%, rgba(20, 8, 38, 0) 100%);
+}
+.finale-msg .gold-big { white-space: nowrap; font-size: clamp(2.2rem, 9.4vw, 6rem); }
 .finale-msg.in { opacity: 1; }
 .gold-big {
   font-family: var(--serif); font-weight: 800; font-size: clamp(2.6rem, 10vw, 6rem); letter-spacing: 0.04em;

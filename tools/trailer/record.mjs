@@ -11,7 +11,9 @@ let chromium;
 try { ({ chromium } = require('playwright')); } catch { ({ chromium } = require(`${execSync('npm root -g').toString().trim()}/playwright`)); }
 
 const OUT = process.argv[2] || 'trailer-frames';
-fs.rmSync(OUT, { recursive: true, force: true });
+// TRAILER_ONLY=montage|finale TRAILER_START=<frame> re-records just that part (montage, or finale + end card) into existing frames
+const ONLY = process.env.TRAILER_ONLY || '';
+if (!ONLY) fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
 const FPS = 30;
 const FRAME_MS = 1000 / FPS;
@@ -26,7 +28,7 @@ const page = await context.newPage();
 page.on('pageerror', (e) => console.log('pageerror', e.message));
 await page.clock.install({ time: new Date('2026-11-23T10:00:00') });
 
-let frame = 0;
+let frame = Number(process.env.TRAILER_START || 0);
 const log = (m) => console.log(`[${(frame / FPS).toFixed(1)}s] ${m}`);
 
 // ---------- caption overlay (trailer only) ----------
@@ -73,17 +75,32 @@ async function rec(sec, each) {
 }
 const ev = (fn, arg) => page.evaluate(fn, arg);
 async function advance(ms) { await page.clock.runFor(ms); }
+/** Keep recording (game time advances) until a selector exists – never wait in real time. */
+async function recUntil(selector, maxSec = 6) {
+  for (let i = 0; i < maxSec * FPS; i++) {
+    if (await page.$(selector)) return;
+    await shoot();
+  }
+  throw new Error('timed out waiting for ' + selector);
+}
+/** Stop the page clock from following real time: from now on only runFor() moves it. */
+async function pauseClock() {
+  const now = await page.evaluate(() => Date.now());
+  await page.clock.pauseAt(now + 1000);
+}
 
 async function loadWithSave(save) {
   await page.goto(URL);
-  await page.evaluate((s) => { localStorage.clear(); if (s) localStorage.setItem('stem-is-for-you-save-v1', JSON.stringify(s)); localStorage.setItem('stem-is-for-you-prefs-v1', '{"muted":true}'); }, save);
+  await page.evaluate((s) => { localStorage.clear(); if (s) localStorage.setItem('stem-is-for-you-save-v1', JSON.stringify(s)); }, save);
   await page.reload();
+  await pauseClock();
   await advance(500);
   await setupOverlay();
 }
 
 const baseSave = (results, extra = {}) => ({ v: 1, characterId: 'zoe', results, progress: {}, elapsed: 61, timerOn: false, finished: false, ...extra });
 
+if (!ONLY) {
 // ===== 1. Title (intro screen) =====
 await loadWithSave(null);
 await caption('Locked in a <b>science museum</b> after dark…', '4%');
@@ -108,7 +125,7 @@ await rec(3.4, async (t, i) => {
 });
 
 // ===== 4. Inspect + answer =====
-await page.waitForSelector('.clue-card');
+await recUntil('.clue-card.in');
 await caption('Read the clues about <b>real women scientists</b>', '2%');
 await rec(2.6);
 await page.locator('.answer', { hasText: 'Oxygen' }).click();
@@ -119,7 +136,7 @@ await caption('Right answer = <b>★ stars</b>', '2%');
 await rec(1.0);
 
 // ===== 5. Name restored → letter → door =====
-await page.waitForSelector('.reveal-card');
+await recUntil('.reveal-card.in');
 await caption('Restore her <b>name</b>…', '2%');
 await rec(2.4);
 await page.click('.reveal-card .btn');
@@ -127,16 +144,25 @@ await caption('…collect the <b>letter</b> and unlock the <b>door</b>!');
 await rec(1.6);
 await rec(3.0, async (t, i) => { if (i === 10) await ev(() => window.__stem.walkTo(0, -13.2)); });
 
+} // end scenes 1–5
+
 // ===== 6. Exhibit montage (plaques show the illustrated portraits) =====
+if (!ONLY || ONLY === 'montage') {
+if (ONLY) {
+  await loadWithSave(baseSave({ lovelace: 3, maric: 2, curie: 2 }));
+  await page.click('text=Continue');
+  await advance(200);
+}
+await page.addStyleTag({ content: '.hud { visibility: hidden !important; }' });
 const montage = ['franklin', 'lamarr', 'johnson', 'tereshkova', 'hamilton', 'doudna-charpentier', 'mirzakhani'];
-await caption('<b>12</b> brilliant scientists to discover');
+await caption('<b>12</b> brilliant scientists to discover', '3%');
 for (const id of montage) {
   await ev((cid) => {
     const s = window.__stem;
     const c = s.museum.cases.find((x) => x.exhibit.id === cid);
     c.setSolved(true);
     s.museum.setActiveRoom(c.roomIndex);
-    s.camOverride = { pos: [c.pos.x - 0.9, 2.2, c.pos.z + 2.6], look: [c.pos.x, 1.95, c.pos.z] };
+    s.camOverride = { pos: [c.pos.x - 1.1, 2.3, c.pos.z + 3.2], look: [c.pos.x, 2.25, c.pos.z] };
     s.snap();
     s._shot = c;
   }, id);
@@ -144,12 +170,15 @@ for (const id of montage) {
     await ev((tt) => {
       const s = window.__stem, c = s._shot;
       const a = -0.35 + tt * 0.55;
-      s.camOverride = { pos: [c.pos.x + Math.sin(a) * 2.7, 2.15, c.pos.z + Math.cos(a) * 2.7], look: [c.pos.x, 1.95, c.pos.z] };
+      s.camOverride = { pos: [c.pos.x + Math.sin(a) * 3.3, 2.3, c.pos.z + Math.cos(a) * 3.3], look: [c.pos.x, 2.25, c.pos.z] };
       s.snap();
     }, t);
   });
 }
 
+}
+
+if (!ONLY || ONLY === 'finale') {
 // ===== 7. Finale: the 13th pedestal and the mirror =====
 const all = {};
 for (const id of ['lovelace', 'curie', 'maric', 'franklin', 'meitner', 'lamarr', 'johnson', 'tereshkova', 'hamilton', 'kwolek', 'doudna-charpentier', 'mirzakhani']) all[id] = 3;
@@ -158,11 +187,11 @@ await page.click('text=Continue');
 await advance(200);
 await ev(() => { const s = window.__stem; const c = s.museum.finaleCentre; s.player.teleport(c.x, c.z + 4.6, Math.PI); s.snap(); });
 await caption('…and then <b>one empty pedestal</b> is waiting');
-await rec(1.0);
+await rec(0.6);
 await ev(() => { const c = window.__stem.museum.finaleCentre; window.__stem.walkTo(c.x, c.z); });
 await rec(1.4);
 await caption('');
-await rec(4.6);
+await rec(5.6);
 
 // ===== 8. End card =====
 await ev(() => {
@@ -176,6 +205,7 @@ await ev(() => {
   document.body.append(d);
 });
 await rec(3.6);
+}
 
 console.log(`done: ${frame} frames (${(frame / FPS).toFixed(1)} s) in ${OUT}`);
 await browser.close();
